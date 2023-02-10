@@ -1,7 +1,8 @@
 import './styles/global.css'
-import Amora from './image/casados.png';
+import Amora from './image/japa.png';
 import { Loading } from './loading/Loading';
-import { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 export function App() {
   const [showLoading, setShowLoading] = useState(true)
@@ -9,34 +10,32 @@ export function App() {
   useEffect(() => {
     setTimeout(() => {
       setShowLoading(false)
-    }, 2000);
+    }, 3500);
   }, []);
 
 
-  const buttomRef = useRef();
-  
-  function handleNotButtom() {
-    const numberAleatory = Math.floor(Math.random() * 750) + 1;
-    const numberAleatory2 = Math.floor(Math.random() * 280) + 1;
-    buttomRef.current.style = `left: ${numberAleatory2}px; top: ${numberAleatory}px`;
-   }
- 
   return (
     <>
     {showLoading === true ? <Loading/> : (
-      <>
-        <div className='container'>
+      <div className='container'>
       <div className='container-img'>
         <img src={Amora}/>
       </div>
+      <strong>Japinha ❤️</strong>
 
-      <strong>Quer namorar comigo?</strong>
+      <div>
+        <h3> Lista das coisas que ela não gosta </h3>
+        <ul>
+          <li>Filmes</li>
+          <li>Tatuagens</li>
+          <li>Brincos</li>
+          <li>Futebol</li>
+          <li>Uno</li>
+        </ul>
+      </div>
 
-        </div>
-        <button onClick={() => alert("Você agora namora com Juan ❤")}>SIM</button>
-        <button ref={buttomRef} className='notDisable' onClick={handleNotButtom}>NÃO</button>
-      </>
-      
+      <a href="https://www.instagram.com/jamilipinto_/">Siga-me</a>
+    </div>
     )}
     </>
     

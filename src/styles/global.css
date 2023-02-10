@@ -4,18 +4,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lobster', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Indie Flower', cursive;
 }
 body {
-    background-color: rgb(190, 190, 190);
+    background-color: rgb(9, 0, 17);
+    color: black;
     letter-spacing: 1px;
-    height: 100vh;
+    min-height: 100vh;
     padding: 120px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
 }
 .container-img {
     width: 100%;
@@ -26,7 +23,7 @@ body {
     align-items: center;
 }
 img {
-    border: 5px dotted rgb(0, 33, 37);
+    border: 3px dotted black;
     border-radius: 100%;
     width: 180px;
     height: 180px;
@@ -35,13 +32,29 @@ img {
 .container {
     margin: auto;
     border-radius: 8px;
-    padding: 50px 40px;
+    width: 100%;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px 20px;
     background-color: rgb(231, 231, 231);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 6s ease;
+}
+a {
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(238, 238, 238);
+    text-decoration: none;
+    background-color: rgb(14, 14, 14);
+    font-family: 'Inter', sans-serif;
+}
+a:hover {
+    background-color: rgb(31, 31, 31);
 }
 
 .container strong {
@@ -53,29 +66,22 @@ img {
     font-family: 'Lobster', cursive;
 }
 
-button {
-    margin-top: 30px;
-    margin-left: 55px;
-    border: none;
-    background-color: rgb(0, 33, 37);
-    color: white;
-    padding: 10px 40px;
-    border-radius: 8px;
-    transition: ease-in-out 0.5s;
-    cursor: pointer;
+h3 {
+    margin-top: 25px;
+    font-size: 22px;
+    margin-bottom: 10px;
+
 }
-button:hover {
-    opacity: 0.8;
+ul {
+    display: flex;
+    flex-wrap: wrap;
 }
+ul li {
+    font-size: 18px;
+    margin-left: 30px;
+    font-weight: 600;
 
-.notDisable {
-    position: absolute;
 }
-
-
-
-
-
 .loading-overlay {
     display: flex;
     flex-direction: column;
@@ -88,17 +94,16 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    color: rgb(0, 33, 37);
+    color: rgb(17, 17, 17);
     background-color: rgba(255, 255, 255, 0.952);
-    transition: all 6s ease;
-}
-.loading-overlay p {
-    font-size: 20px;
 }
 .loading-overlay strong {
     position: fixed;
     bottom: 25px;
     
+    font-size: 20px;
+}
+.loading-overlay p {
     font-size: 20px;
 }
 .happy {
