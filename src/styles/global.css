@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+body {
+    background-color: rgb(190, 190, 190);
+    letter-spacing: 1px;
+    height: 100vh;
+    padding: 120px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.container-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    border: 5px dotted rgb(0, 33, 37);
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+.container {
+    margin: auto;
+    border-radius: 8px;
+    padding: 50px 40px;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 6s ease;
+}
+
+.container strong {
+    font-size: 30px;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    color: rgb(0, 33, 37);
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lobster', cursive;
+}
+
+button {
+    margin-top: 30px;
+    margin-left: 55px;
+    border: none;
+    background-color: rgb(0, 33, 37);
+    color: white;
+    padding: 10px 40px;
+    border-radius: 8px;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.notDisable {
+    position: absolute;
+}
+
+
+
+
+
+.loading-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(0, 33, 37);
+    background-color: rgba(255, 255, 255, 0.952);
+    transition: all 6s ease;
+}
+.loading-overlay p {
+    font-size: 20px;
+}
+.loading-overlay strong {
+    position: fixed;
+    bottom: 25px;
+    
+    font-size: 20px;
+}
+.happy {
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+@media (max-width: 500px) {
+    h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    ul li {
+        font-size: 18px;
+        margin-left: 30px;
+        font-weight: 600;
+    }
+}
